@@ -1,0 +1,10 @@
+services:
+  node: 
+    build:
+      context: .
+      dockerfile: Dockerfile.dev 
+    container_name: node
+    ports:
+      - "3000:3000" 
+    volumes:
+      - ./src:/app/src
