@@ -6,8 +6,10 @@ services:
     container_name: node
     ports:
       - 3000:3000
+      - 9229:9229
     volumes:
       - ./src:/app/src
       - /app/node_modules
     environment:
       - NODE_ENV=dev
+    command: yarn dev
